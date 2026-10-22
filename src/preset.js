@@ -8,7 +8,7 @@ module.exports = {
   tag: "fc",
   env: "FLASHCODE",
   model: "deepseek-v4.1-flash",
-  mailSubject: "",
+  mailSubject: "Flash",
   tools: true,
   stream: false,
   checkin: true,

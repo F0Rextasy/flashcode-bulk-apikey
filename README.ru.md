@@ -1,5 +1,4 @@
 <div align="center">
-
 ```
 ███████╗██╗      █████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
 ██╔════╝██║     ██╔══██╗██╔════╝██║  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝
@@ -8,9 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
-
 # flashcode-bulk-apikey
-
 **Массовое создание аккаунтов Flash Code с автоматически сгенерированными API-ключами — OpenAI-совместимый инференс (deepseek-v4.1-flash / deepseek-v4-pro) с вызовом инструментов + коннектор 9Router.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -21,7 +18,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 Быстрый старт](#-quick-start) · [🎁 Бесплатный тариф](#-free-tier--how-much-you-get) · [🤖 Модели](#-models--all-2-of-them) · [🧪 Использование API](#-how-to-use-the-api) · [✅ Проверено](#-verified-working--every-key-is-tested) · [🧭 Как это работает](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Опции](#️-cli-options) · [🛰️ Прокси](#️-behind-a-proxy) · [🐞 Проблемы](#-issues)
+[🛠 Быстрый старт](#-quick-start) · [🎁 Бесплатный тариф](#-free-tier--how-much-you-get) · [🤖 Модели](#-models--all-2-of-them) · [🧪 Использование API](#-how-to-use-the-api) · [✅ Проверено](#-verified-working--every-key-is-tested) · [🧭 Как это работает](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ Опции](#️-cli-options) · [🛰️ Прокси](#️-behind-a-proxy) · [🐞 Проблемы](#-issues)
 
 </div>
 
@@ -138,6 +135,17 @@ node src/launcher.js
 
 ## 🔌 Подключение к 9Router
 
+## 🔌 Подключение к OmniRoute
+
+## 🔌 Подключение к OmniRoute
+
+## 🔌 Подключение к OmniRoute
+
+## 🔌 Подключение к OmniRoute
+
+## 🔌 Подключение к OmniRoute
+## 🔌 Подключение к OmniRoute
+## 🔌 Подключение к OmniRoute
 ## 🔌 Подключение к OmniRoute
 ## 🔌 Подключение к OmniRoute
 ## 🔑 Что даёт один ключ

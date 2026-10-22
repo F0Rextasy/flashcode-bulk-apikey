@@ -1,5 +1,4 @@
 <div align="center">
-
 ```
 ███████╗██╗      █████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
 ██╔════╝██║     ██╔══██╗██╔════╝██║  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝
@@ -8,9 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
-
 # flashcode-bulk-apikey
-
 **Otomatik oluşturulan API anahtarlarıyla toplu Flash Code hesabı açın — araç çağırma destekli OpenAI uyumlu çıkarım (deepseek-v4.1-flash / deepseek-v4-pro) + 9Router bağlayıcısı.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -21,7 +18,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 Hızlı başlangıç](#-quick-start) · [🎁 Ücretsiz katman](#-free-tier--how-much-you-get) · [🤖 Modeller](#-models--all-2-of-them) · [🧪 API'yi kullanın](#-how-to-use-the-api) · [✅ Doğrulandı](#-verified-working--every-key-is-tested) · [🧭 Nasıl çalışır](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Seçenekler](#️-cli-options) · [🛰️ Proxy'ler](#️-behind-a-proxy) · [🐞 Sorunlar](#-issues)
+[🛠 Hızlı başlangıç](#-quick-start) · [🎁 Ücretsiz katman](#-free-tier--how-much-you-get) · [🤖 Modeller](#-models--all-2-of-them) · [🧪 API'yi kullanın](#-how-to-use-the-api) · [✅ Doğrulandı](#-verified-working--every-key-is-tested) · [🧭 Nasıl çalışır](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ Seçenekler](#️-cli-options) · [🛰️ Proxy'ler](#️-behind-a-proxy) · [🐞 Sorunlar](#-issues)
 
 </div>
 
@@ -138,6 +135,17 @@ node src/launcher.js
 
 ## 🔌 9Router'e bağlanın
 
+## 🔌 OmniRoute'e bağlanın
+
+## 🔌 OmniRoute'e bağlanın
+
+## 🔌 OmniRoute'e bağlanın
+
+## 🔌 OmniRoute'e bağlanın
+
+## 🔌 OmniRoute'e bağlanın
+## 🔌 OmniRoute'e bağlanın
+## 🔌 OmniRoute'e bağlanın
 ## 🔌 OmniRoute'e bağlanın
 ## 🔌 OmniRoute'e bağlanın
 ## 🔑 Bir anahtar size ne kazandırır

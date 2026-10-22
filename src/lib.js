@@ -19,7 +19,7 @@ const https = require('https');
 const path = require('path');
 const { URL } = require('url');
 
-const { parseProxy, createAgent, loadPoolFile } = require(path.join(__dirname, '..', '..', 'river-bulk-apikey', 'src', 'proxy'));
+const { parseProxy, createAgent, loadPoolFile } = require('./proxy');
 
 const ROOT = path.resolve(__dirname, '..', '..');
 const CODE_RE = /[0-9]{4,8}/;

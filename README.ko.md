@@ -1,5 +1,4 @@
 <div align="center">
-
 ```
 ███████╗██╗      █████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
 ██╔════╝██║     ██╔══██╗██╔════╝██║  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝
@@ -8,9 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
-
 # flashcode-bulk-apikey
-
 **자동 생성된 API 키로 Flash Code 계정을 대량 생성 — OpenAI 호환 추론(deepseek-v4.1-flash / deepseek-v4-pro), 툴 호출 + 9Router 커넥터 지원.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -21,7 +18,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 빠른 시작](#-quick-start) · [🎁 무료 티어](#-free-tier--how-much-you-get) · [🤖 모델](#-models--all-2-of-them) · [🧪 API 사용법](#-how-to-use-the-api) · [✅ 검증됨](#-verified-working--every-key-is-tested) · [🧭 작동 방식](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ 옵션](#️-cli-options) · [🛰️ 프록시](#️-behind-a-proxy) · [🐞 이슈](#-issues)
+[🛠 빠른 시작](#-quick-start) · [🎁 무료 티어](#-free-tier--how-much-you-get) · [🤖 모델](#-models--all-2-of-them) · [🧪 API 사용법](#-how-to-use-the-api) · [✅ 검증됨](#-verified-working--every-key-is-tested) · [🧭 작동 방식](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ 옵션](#️-cli-options) · [🛰️ 프록시](#️-behind-a-proxy) · [🐞 이슈](#-issues)
 
 </div>
 
@@ -138,6 +135,17 @@ node src/launcher.js
 
 ## 🔌 9Router에 연결
 
+## 🔌 OmniRoute에 연결
+
+## 🔌 OmniRoute에 연결
+
+## 🔌 OmniRoute에 연결
+
+## 🔌 OmniRoute에 연결
+
+## 🔌 OmniRoute에 연결
+## 🔌 OmniRoute에 연결
+## 🔌 OmniRoute에 연결
 ## 🔌 OmniRoute에 연결
 ## 🔌 OmniRoute에 연결
 ## 🔑 키 하나로 얻는 것

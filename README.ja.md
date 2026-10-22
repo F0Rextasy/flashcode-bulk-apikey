@@ -1,5 +1,4 @@
 <div align="center">
-
 ```
 ███████╗██╗      █████╗ ███████╗██╗  ██╗ ██████╗ ██████╗ ██████╗ ███████╗
 ██╔════╝██║     ██╔══██╗██╔════╝██║  ██║██╔════╝██╔═══██╗██╔══██╗██╔════╝
@@ -8,9 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
-
 # flashcode-bulk-apikey
-
 **自動生成された API キーで Flash Code アカウントを一括作成 — OpenAI 互換の推論（deepseek-v4.1-flash / deepseek-v4-pro）、ツール呼び出し対応 + 9Router コネクタ。**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
@@ -21,7 +18,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 クイックスタート](#-quick-start) · [🎁 無料枠](#-free-tier--how-much-you-get) · [🤖 モデル](#-models--all-2-of-them) · [🧪 API の使い方](#-how-to-use-the-api) · [✅ 検証済み](#-verified-working--every-key-is-tested) · [🧭 仕組み](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ オプション](#️-cli-options) · [🛰️ プロキシ](#️-behind-a-proxy) · [🐞 問題報告](#-issues)
+[🛠 クイックスタート](#-quick-start) · [🎁 無料枠](#-free-tier--how-much-you-get) · [🤖 モデル](#-models--all-2-of-them) · [🧪 API の使い方](#-how-to-use-the-api) · [✅ 検証済み](#-verified-working--every-key-is-tested) · [🧭 仕組み](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ オプション](#️-cli-options) · [🛰️ プロキシ](#️-behind-a-proxy) · [🐞 問題報告](#-issues)
 
 </div>
 
@@ -138,6 +135,17 @@ node src/launcher.js
 
 ## 🔌 9Router に接続する
 
+## 🔌 OmniRoute に接続する
+
+## 🔌 OmniRoute に接続する
+
+## 🔌 OmniRoute に接続する
+
+## 🔌 OmniRoute に接続する
+
+## 🔌 OmniRoute に接続する
+## 🔌 OmniRoute に接続する
+## 🔌 OmniRoute に接続する
 ## 🔌 OmniRoute に接続する
 ## 🔑 1 つのキーで得られるもの
 

@@ -19,7 +19,7 @@ const { sleep, isExitError } = require('./lib');
 
 let emailnator = null;
 try {
-  emailnator = require(path.join(__dirname, '..', 'cloudflare-wai', 'emailnator.js'));
+  emailnator = require('./emailnator');
 } catch (e) {
   /* reported on first use */
 }

@@ -18,7 +18,7 @@
 const https = require('https');
 const http = require('http');
 const { URL } = require('url');
-const { createAgent } = require('../../river-bulk-apikey/src/proxy');
+const { createAgent } = require('./proxy');
 const { req, isExitError } = require('./lib');
 
 const QS = '__clerk_api_version=2026-05-12&_clerk_js_version=6.39.0';
