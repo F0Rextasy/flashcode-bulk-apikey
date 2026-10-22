@@ -7,6 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
+
 # flashcode-bulk-apikey
 **Crea cuentas de Flash Code en masa con claves API autogeneradas — inferencia compatible con OpenAI (deepseek-v4.1-flash / deepseek-v4-pro) con llamada a herramientas + conector 9Router.**
 

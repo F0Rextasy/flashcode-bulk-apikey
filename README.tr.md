@@ -7,6 +7,7 @@
 ██║     ███████╗██║  ██║███████║██║  ██║╚██████╗╚██████╔╝██████╔╝███████╗
 ╚═╝     ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝
 ```
+
 # flashcode-bulk-apikey
 **Otomatik oluşturulan API anahtarlarıyla toplu Flash Code hesabı açın — araç çağırma destekli OpenAI uyumlu çıkarım (deepseek-v4.1-flash / deepseek-v4-pro) + 9Router bağlayıcısı.**
 

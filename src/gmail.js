@@ -57,8 +57,10 @@ async function withRetry(label, fn, { tries = 5 } = {}) {
   throw new Error(`${label}: ${String(last && last.message).slice(0, 160)}`);
 }
 
-function pickExit(pool) {
-  return pool ? pool.next() : null;
+// `LiveSupply.next()` preflights the exit and is async; awaiting here keeps both
+// pool shapes working (a sync ExitPool just resolves immediately).
+async function pickExit(pool) {
+  return pool ? await pool.next() : null;
 }
 
 /** Fresh gmail box; returns {plain, dotted, exit}. */
@@ -66,7 +68,7 @@ async function newGmail(pool, { tries = 6 } = {}) {
   if (!emailnator) throw new Error('emailnator module missing');
   let lastErr = null;
   for (let i = 0; i < tries; i++) {
-    const exit = pickExit(pool);
+    const exit = await pickExit(pool);
     try {
       const box = await withRetry('emailnator generate', () => emailnator.newAddress(exit), { tries: 3 });
       if (pool && pool.alive) pool.alive(exit);
@@ -81,7 +83,7 @@ async function newGmail(pool, { tries = 6 } = {}) {
 
 async function list(plain, pool, { tries = 5 } = {}) {
   for (let i = 0; i < tries; i++) {
-    const exit = pickExit(pool);
+    const exit = await pickExit(pool);
     try {
       const messages = await withRetry('emailnator list', () => emailnator.listMessages(plain, exit), { tries: 3 });
       if (pool && pool.alive) pool.alive(exit);
@@ -96,7 +98,7 @@ async function list(plain, pool, { tries = 5 } = {}) {
 
 async function read(id, pool, { tries = 4 } = {}) {
   for (let i = 0; i < tries; i++) {
-    const exit = pickExit(pool);
+    const exit = await pickExit(pool);
     try {
       const full = await withRetry('emailnator read', () => emailnator.readMessage(id, exit), { tries: 3 });
       if (pool && pool.alive) pool.alive(exit);
