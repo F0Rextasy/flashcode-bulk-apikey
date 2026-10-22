@@ -1,0 +1,34 @@
+{
+  "name": "flashcode-bulk-apikey",
+  "version": "1.0.0",
+  "description": "Bulk-create Flash Code accounts with auto-generated API keys — OpenAI-compatible inference (deepseek-v4.1-flash / deepseek-v4-pro) with tool-calling + 9Router connector.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "flashcode-bulk-apikey": "src/cli.js",
+    "flashcode-bulk-apikey-launcher": "src/launcher.js"
+  },
+  "main": "src/cli.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/launcher.js",
+    "mint": "node src/cli.js",
+    "9router": "node src/connect-9router.js",
+    "omniroute": "node src/connect-omniroute.js"
+  },
+  "keywords": [
+    "api-key",
+    "bulk",
+    "register",
+    "launcher",
+    "flashcode",
+    "apikey"
+  ],
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ]
+}
