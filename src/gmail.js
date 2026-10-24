@@ -111,8 +111,42 @@ async function read(id, pool, { tries = 4 } = {}) {
   return {};
 }
 
+const flat = (h) => String(h || '').replace(/<style[\s\S]*?<\/style>/gi, ' ').replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/&nbsp;/gi, ' ').replace(/\s+/g, ' ').trim();
 /** Polls until `extract(text)` matches; text = subject + readable body. */
-async function waitCode(plain, pool, extract, { timeoutMs = 240000, pollMs = 8000 } = {}) {
+const msgId = (m) => String((m && (m.message_id || m.id)) || '');
+
+/**
+ * Ids already in the box, taken BEFORE the code is requested. These are *shared*
+ * public mailboxes: a recycled address is full of other tenants' mail, and a
+ * code that was already there when we asked is somebody else's (measured: a
+ * stale code submitted this way answered `Verification code is incorrect or has
+ * expired`). A failed snapshot is not an empty box — it throws.
+ */
+async function snapshot(plain, pool, { tries = 5, gapMs = 4000 } = {}) {
+  let last = null;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const { messages } = await list(plain, pool, { tries: 2 });
+      return new Set((messages || []).map(msgId).filter(Boolean));
+    } catch (e) { last = e; await sleep(gapMs); }
+  }
+  throw new Error(`emailnator snapshot failed after ${tries} tries: ${String((last && last.message) || last).slice(0, 120)}`);
+}
+
+/**
+ * Polls until a *fresh* mail that matches `extract` arrives.
+ *
+ * `baseline` (or its alias `since`) is REQUIRED — the box is shared, so "any
+ * mail with digits" once submitted another service's code. Nothing present in
+ * the baseline is ever read. `brand` narrows further: when given, only a mail
+ * whose sender/subject names this panel may supply a code.
+ */
+async function waitCode(plain, pool, extract, { baseline = null, since = null, brand = null, timeoutMs = 240000, pollMs = 8000 } = {}) {
+  if (baseline == null && since == null) {
+    throw new Error('gmail.waitCode: baseline required — a pre-send snapshot is the only fence for a shared emailnator box');
+  }
+  const fence = baseline instanceof Set ? new Set([...baseline].map(String)) : new Set([...(baseline || since)].map(String));
+  const brandRe = brand ? (brand instanceof RegExp ? brand : new RegExp(brand, 'i')) : null;
   const t0 = Date.now();
   const seen = new Set();
   while (Date.now() - t0 < timeoutMs) {
@@ -126,14 +160,15 @@ async function waitCode(plain, pool, extract, { timeoutMs = 240000, pollMs = 800
     for (const m of messages) {
       const id = String(m.message_id || m.id || '');
       const subject = m.subject || '';
-      if (!id || seen.has(id)) continue;
+      if (!id || seen.has(id) || fence.has(id)) continue;
       seen.add(id);
+      if (brandRe && !brandRe.test(`${m.from || ''} ${subject}`)) continue;
       let text = subject;
       try {
         const full = await read(id, pool);
         // Emailnator answers with the body in `content` (HTML); `text`/`html` are
         // other backends' names — read all three.
-        text = `${subject}\n${full.text || ''}\n${String(full.content || full.html || '').replace(/<[^>]+>/g, ' ')}`;
+        text = `${subject}\n${full.text || ''}\n${flat(full.content || full.html || '')}`;
       } catch (e) {
         /* subject-only */
       }
@@ -147,4 +182,4 @@ async function waitCode(plain, pool, extract, { timeoutMs = 240000, pollMs = 800
   return null;
 }
 
-module.exports = { newGmail, list, read, waitCode };
+module.exports = { newGmail, list, read, waitCode, snapshot, msgId };

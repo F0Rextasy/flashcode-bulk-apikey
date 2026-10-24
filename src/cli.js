@@ -154,10 +154,13 @@ async function mint() {
     const rec = { provider: P.name, base: P.base, index: accounts.length + 1, email: box.plain, mailbox: box, username, password, created: nowIso(), steps: {} };
     log(`#${rec.index} ${box.plain} user=${username}`);
     try {
+      // Emailnator boxes are shared and recycled: snapshot the ids BEFORE the
+      // code is asked for, or another tenant's mail answers as ours.
+      const baseline = await gmail.snapshot(box.plain, mailPool);
       const sent = await panel.sendCode(box.plain, { tries: 8 });
-      rec.steps.sendCode = { status: sent.status, body: sent.json ? (sent.json.message || JSON.stringify(sent.json)) : String(sent.text || '').slice(0, 150) };
+      rec.steps.sendCode = { status: sent.status, body: sent.json ? (sent.json.message || JSON.stringify(sent.json)) : String(sent.text || '').slice(0, 150), baseline: baseline.size };
       if (sent.status >= 400 || (sent.json && sent.json.success === false)) { rec.status = 'send-refused'; accounts.push(rec); saveAccounts(); continue; }
-      const got = await gmail.waitCode(box.plain, mailPool, (t) => (SUBJECT_RE && !SUBJECT_RE.test(String(t)) ? null : (String(t).match(/([0-9]{4,8})/) || [])[1]), { timeoutMs: 240000, pollMs: 6000 });
+      const got = await gmail.waitCode(box.plain, mailPool, (t) => (SUBJECT_RE && !SUBJECT_RE.test(String(t)) ? null : (String(t).match(/([0-9]{4,8})/) || [])[1]), { baseline, brand: SUBJECT_RE, timeoutMs: 240000, pollMs: 6000 });
       if (!got) { rec.status = 'no-code'; accounts.push(rec); saveAccounts(); continue; }
       rec.steps.code = { code: got.code, subject: got.subject };
       log(`  code ${got.code}`);
